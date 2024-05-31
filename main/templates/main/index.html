@@ -3,8 +3,17 @@
 {% block title %} Main page {% endblock %}
 
 {% block content %}
-    <div class="features">
-
+    <div class="container">
+        <div class="row">
+            {% for p in news %}
+                <div class="col-3">
+                    <p><img src="media/{{p.photo}}"></p>
+                    <p class="first">{{p.title}}</p>
+                    <p class="last">{{p.time_create}}</p>
+                    <p class="content">{{p.content}}</p>
+                </div>
+            {% endfor %}
+        </div>
     </div>
     <h1> Main page </h1>
 {% endblock %}

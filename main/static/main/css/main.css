@@ -1,5 +1,5 @@
 body {
-    background: #2c2c2c;
+    background: red;
 }
 
 aside {
@@ -30,12 +30,19 @@ aside h3 {
 }
 
 aside ul {
+    font-size: 25px;
     list-style: none
 }
 
+aside ul a {
+    font-size: 30px;
+}
+
 aside ul li {
+    font-size: 25px;
     color: black;
     display: block;
+    text-decoration: none;
     margin-top: 20px;
     transition: transform .6s ease;
 }
