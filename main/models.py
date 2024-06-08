@@ -18,14 +18,14 @@ class Student(models.Model):
         ("Y", "Yes"),
         ("N", "No"),
     ]
-    surname = models.CharField(max_length=255)
-    name = models.CharField(max_length=255)
-    birthdate = models.DateField()
-    football = models.CharField(max_length=1, blank=True, choices=FOOTBALL_GROUPS)
-    box = models.CharField(max_length=1, blank=True, choices=GROUPS)
-    dances = models.CharField(max_length=1, blank=True, choices=GROUPS)
-    fitness = models.CharField(max_length=1, blank=True, choices=GROUPS_FITNESS)
-    phone_number = models.CharField(max_length=11)
+    surname = models.CharField(max_length=255, verbose_name="Фамилия")
+    name = models.CharField(max_length=255, verbose_name="Имя")
+    birthdate = models.DateField(verbose_name="Дата рождения")
+    football = models.CharField(max_length=1, blank=True, choices=FOOTBALL_GROUPS, verbose_name="Футбол")
+    box = models.CharField(max_length=1, blank=True, choices=GROUPS, verbose_name="Бокс")
+    dances = models.CharField(max_length=1, blank=True, choices=GROUPS, verbose_name="Танцы")
+    fitness = models.CharField(max_length=1, blank=True, choices=GROUPS_FITNESS, verbose_name="Фитнесс")
+    phone_number = models.CharField(max_length=11, verbose_name="Телефонный номер")
 
     def __str__(self):
         return self.surname

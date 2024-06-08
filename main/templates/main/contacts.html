@@ -1,0 +1,17 @@
+{% extends 'main/layout.html'%}
+{% load static %}
+
+
+{% block title %} Contacts {% endblock %}
+
+{% block content %}
+<div class="contacts">
+    <h1>Контакты</h1>
+</div>
+<ul class="contactsList">
+    <li><img class="img-icon" src="{% static 'main/img/phone.png' %}">+79958573456</li>
+    <li><img class="img-icon" src="{% static 'main/img/vk.jpg' %}">@dzerjinec</li>
+    <li><img class="img-icon" src="{% static 'main/img/tg.png' %}">@dzerjinec</li>
+    <li><img class="img-icon" src="{% static 'main/img/addr.png' %}">г. Томск с. Дзержинское пер. Фабричный 1</li>
+</ul>
+{% endblock %}
